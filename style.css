@@ -367,7 +367,7 @@ section:nth-of-type(even) { /* About, Projects, Contact */
 /* Skills Section */
 
 .skills-section .container{
-    padding: 10px 80px;
+    padding: 0 50px 10px;
 }
 .skills-section {
     background-color: var(--bg-light);
@@ -893,7 +893,7 @@ footer {
         gap: 30px;
     }
     .skill-item, .project-card {
-        padding: 30px;
+        padding: 20px;
     }
 }
 
@@ -966,11 +966,19 @@ footer {
     .contact-grid {
         grid-template-columns: 1fr;
     }
+    .contact-section p{
+        padding: auto;
+        object-fit: cover;
+    }
     .contact-info {
-        padding-right: 0;
+        padding: 0;
         text-align: center;
     }
     .contact-info p {
+        justify-content: center;
+    }
+    .contact-grid{
+        padding: 0 auto;
         justify-content: center;
     }
     .social-links {
@@ -1007,6 +1015,9 @@ footer {
     .container {
         padding: 0 15px; /* Reduce padding further */
     }
+    .skills-section {
+        padding: 0 20px;
+    }
     h1 {
         font-size: 2em;
     }
@@ -1041,6 +1052,9 @@ footer {
     }
     .skill-item i {
         font-size: 3em;
+    }
+    .skills-section p {
+        padding: 0 auto;
     }
     .btn-small {
         font-size: 0.85em;
