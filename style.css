@@ -1023,7 +1023,7 @@ footer {
     h2 {
         font-size: 1.8em;
     }
-     .about-section .about-content p {
+     .about-content p {
     font-size: 0.9em;
     color: var(--text-body);
     }
