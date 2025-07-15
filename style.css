@@ -277,7 +277,6 @@ section:nth-of-type(even) { /* About, Projects, Contact */
 .hero-section {
     background: linear-gradient(135deg, var(--secondary-dark), var(--primary-dark));
     color: var(--text-light);
-    padding-bottom: 30px;
     min-height: 600px;
     display: flex;
     align-items: center;
@@ -290,7 +289,7 @@ section:nth-of-type(even) { /* About, Projects, Contact */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap-reverse; /* Image on right, text on left for desktop */
 }
 
