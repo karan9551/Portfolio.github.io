@@ -290,7 +290,6 @@ section:nth-of-type(even) { /* About, Projects, Contact */
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 10px;
     flex-wrap: wrap-reverse; /* Image on right, text on left for desktop */
 }
 
@@ -1037,8 +1036,8 @@ footer {
         font-size: 0.9em;
     }
     .hero-section {
-        padding: 50px 0;
-        gap:10px;
+        padding: 30px 0;
+        
     }
     .logo {
         font-size: 1.8em;
