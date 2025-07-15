@@ -160,21 +160,41 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 
-    // --- Contact Form Submission (Basic Client-Side Example) ---
-    // IMPORTANT: This JavaScript only handles client-side form behavior (prevents default submit, shows alert, logs data, resets form).
-    // For actual email sending, you MUST have a server-side script or use a service like Formspree.io.
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) { // Ensure the form exists before adding listener
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevent the default form submission (page reload)
-            
-            alert('Form submitted! (In a real application, this would send an email.)');
-            console.log('Form data:', new FormData(contactForm)); // Log form data to console
-            contactForm.reset(); // Clear the form fields after submission
-             // Scroll to top after successful submission
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // optional for smooth animation
+// --- Contact Form Submission (Basic Client-Side Example) ---
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Stop normal form submission
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
             });
-        });
-    }
+
+            if (response.ok) {
+                alert('Thanks! Your form has been submitted.');
+                contactForm.reset();
+
+                // Scroll to top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+
+                console.log('Form data sent to Formspree.');
+            } else {
+                alert('Oops! There was a problem submitting your form.');
+            }
+        } catch (error) {
+            alert('Something went wrong. Please try again.');
+            console.error('Form error:', error);
+        }
+    });
+}
