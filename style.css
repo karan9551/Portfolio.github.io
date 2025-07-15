@@ -131,7 +131,7 @@ p {
 
 .btn:hover i {
     font-size: 25px;
-    transform: rotate(360deg);
+    transform: rotate(720deg);
 }
 
 .btn-primary {
