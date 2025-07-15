@@ -126,11 +126,12 @@ p {
 
 .btn i {
     margin-left: 10px;
-    transition: transform 0.2s ease;
+    transition: transform 0.6s ease;
 }
 
 .btn:hover i {
-    transform: translateX(3px);
+    font-size: 25px;
+    transform: rotate(360deg);
 }
 
 .btn-primary {
@@ -141,6 +142,7 @@ p {
 
 .btn-primary:hover {
     background-color: var(--accent-dark-blue);
+    color: var(--text-light);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
 }
